@@ -1,5 +1,6 @@
 package com.youtube.jwt.entity;
 
+
 import javax.persistence.*;
 import java.util.Set;
 

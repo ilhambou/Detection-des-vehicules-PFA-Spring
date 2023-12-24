@@ -2,6 +2,7 @@ package com.youtube.jwt.service;
 
 import com.youtube.jwt.dao.RoleDao;
 import com.youtube.jwt.dao.UserDao;
+import com.youtube.jwt.entity.PoliceT;
 import com.youtube.jwt.entity.Role;
 import com.youtube.jwt.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -45,15 +47,15 @@ public class UserService {
         adminUser.setRole(adminRoles);
         userDao.save(adminUser);
 
-//        User user = new User();
-//        user.setUserName("raj123");
-//        user.setUserPassword(getEncodedPassword("raj@123"));
-//        user.setUserFirstName("raj");
-//        user.setUserLastName("sharma");
-//        Set<Role> userRoles = new HashSet<>();
-//        userRoles.add(userRole);
-//        user.setRole(userRoles);
-//        userDao.save(user);
+       User user = new User();
+        user.setUserName("raj123");
+        user.setUserPassword(getEncodedPassword("raj@123"));
+        user.setUserFirstName("raj");
+        user.setUserLastName("sharma");
+        Set<Role> userRoles = new HashSet<>();
+        userRoles.add(userRole);
+        user.setRole(userRoles);
+        userDao.save(user);
     }
 
     public User registerNewUser(User user) {
@@ -68,5 +70,8 @@ public class UserService {
 
     public String getEncodedPassword(String password) {
         return passwordEncoder.encode(password);
+    }
+    public List<User> getAll() {
+        return (List<User>) userDao.findAll();
     }
 }
