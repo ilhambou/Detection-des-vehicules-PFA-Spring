@@ -1,6 +1,7 @@
 package com.youtube.jwt.entity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,5 +17,8 @@ public class FicheDeRecherche {
     @Id     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-    private  String recherche;
+    @OneToMany
+  private List<Vehicule> vehicule;
+    @OneToOne
+    private Personne personne;
 }
