@@ -8,17 +8,29 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
+
 @Entity
 public class FicheDeRecherche {
-    @Id     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToMany
-  private List<Vehicule> vehicule;
-    @OneToOne
+
+    @ManyToMany
+    @JoinTable(
+            name = "fiche_vehicules",
+            joinColumns = @JoinColumn(name = "fiche_id"),
+            inverseJoinColumns = @JoinColumn(name = "vehicule_id")
+    )
+    private List<Vehicule> vehicules;
+
+    @ManyToOne(optional = true)
     private Personne personne;
+
 }
+

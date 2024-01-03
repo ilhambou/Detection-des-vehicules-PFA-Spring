@@ -1,7 +1,6 @@
 package com.youtube.jwt.controller;
 
 import com.youtube.jwt.entity.FicheDeRecherche;
-import com.youtube.jwt.service.IFiche;
 import com.youtube.jwt.service.IPersonne;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

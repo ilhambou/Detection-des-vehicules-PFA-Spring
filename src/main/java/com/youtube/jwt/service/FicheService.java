@@ -1,4 +1,4 @@
-package com.youtube.jwt.service;
+/*package com.youtube.jwt.service;
 
 import com.youtube.jwt.dao.IFicheDeRecherche;
 import com.youtube.jwt.entity.FicheDeRecherche;
@@ -39,7 +39,7 @@ public class FicheService implements IFiche{
 
         if (optionalStade.isPresent()) {
             FicheDeRecherche existingStade = optionalStade.get();
-            existingStade.setRecherche(stade.getRecherche());
+            //existingStade.setRecherche(stade.getRecherche());
 
             return iFicheDeRecherche.save(existingStade);
         } else {
@@ -48,3 +48,4 @@ public class FicheService implements IFiche{
             return null;
         }    }
 }
+*/

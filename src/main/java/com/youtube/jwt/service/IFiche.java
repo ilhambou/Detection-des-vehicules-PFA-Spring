@@ -1,4 +1,4 @@
-package com.youtube.jwt.service;
+/*package com.youtube.jwt.service;
 
 import com.youtube.jwt.entity.FicheDeRecherche;
 
@@ -13,3 +13,4 @@ public interface IFiche {
     FicheDeRecherche update(FicheDeRecherche stade);
 
 }
+*/

@@ -26,8 +26,4 @@ public class Personne {
     private int age;
     private char sexe; // 'M' pour masculin, 'F' pour féminin, par exemple
 
-
-
-
-
 }

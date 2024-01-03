@@ -21,4 +21,5 @@ public class Vehicule {
     private String couleur;
     private String carburant;
     private boolean automatique;
+    private String licenseplate;
 }
